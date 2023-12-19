@@ -1,0 +1,1 @@
+web: gunicorn azure_bistro.wsgi
