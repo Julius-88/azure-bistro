@@ -3,10 +3,13 @@
 
 {% block content %}
 <section class="hero-section">
-    <h1 class="logo font-satisfy">Azure Bistro</h1>
+    <h1 class="hero-intro font-lora">Discover a World of Flavors at Azure Bistro - Where Every Meal is a
+        <strong>Culinary Adventure</strong>
+    </h1>
     <div class="hero-button-container">
-        <a href="{% url 'menu' %}" class="button hero-button">Menu</a>
-        <a href="#" class="button hero-button">Reserve</a>
+        <a href="{% url 'menu' %}" class="button hero-button" title="Menu"
+            aria-label="Click here to go to the Menu">Menu</a>
+        <a href="#" class="button hero-button" title="Reserve" aria-label="Click here to Reserve tables">Reserve</a>
     </div>
     <div class="hours">
         <p class="font-lato">Mon - Fri: 16:00 - 02:00</p>

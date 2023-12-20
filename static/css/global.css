@@ -103,11 +103,14 @@ header {
     align-items: center;
 }
 
-.hero-section h1 {
+.hero-intro {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin-top: 10px;
     font-weight: lighter;
+    font-size: 5vw;
+    padding: 10px;
 }
 
 .hours {
@@ -117,7 +120,7 @@ header {
 }
 
 .hours p {
-    font-size: 1.2rem;
+    font-size: 4vw;
     margin-bottom: 10px;
 }
 
