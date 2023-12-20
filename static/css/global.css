@@ -262,6 +262,22 @@ footer {
 
 /* ---------------------Media Queries----------------------------------- */
 
+@media screen and (max-width: 480px) {
+    footer {
+        flex-direction: column;
+    }
+
+    .footer-right,
+    .footer-middle {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .navbar li {
+        margin: 10px;
+    }
+}
+
 @media screen and (max-width: 950px) {
     .navbar {
         display: flex;
