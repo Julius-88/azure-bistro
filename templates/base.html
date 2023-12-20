@@ -42,15 +42,14 @@
                             <a href="{% url 'menu' %}#drinks" class="font-lora">Drinks</a>
                         </div>
                     </li>
-                    <li><a href="{% url 'contact' %}" class="font-lora">Contact</a></li>
                     {% if user.is_authenticated %}
                     <li class="dropdown" aria-label="Click here to go to the account page" title="Account">
                         <button class="dropdown-button font-lora">Account</button>
                         <div class="dropdown-content">
                             <a href="{% url 'account_logout' %}" class="font-lora">Sign Out</a>
                             <a href="#" class="font-lora">Manage Reservation</a>
-                            <a class="font-lora {% if user.is_staff %} show {% else %} hide {% endif %}"
-                                href="{% url 'admin:index' %}">Admin
+                            <a href="{% url 'admin:index' %}"
+                                class="font-lora {% if user.is_staff %} {% else %} hide {% endif %}">Admin
                                 Panel</a>
                         </div>
                     </li>
@@ -58,6 +57,7 @@
                     <li><a href="{% url 'account_login' %}" aria-label="Click here to go to the login page"
                             title="Log in" class="font-lora">Log In</a></li>
                     {% endif %}
+                    <li><a href="{% url 'contact' %}" class="font-lora">Contact</a></li>
                 </ul>
             </div>
         </nav>
