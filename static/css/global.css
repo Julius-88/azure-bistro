@@ -91,7 +91,7 @@ header {
     display: block;
 }
 
-/* ---------------------HERO PAGE-----------------------------------*/
+/* ---------------------HERO Section-----------------------------------*/
 
 .hero-section {
     background: no-repeat center center / cover url('https://res.cloudinary.com/julius-cloud/image/upload/w_300,h_200,c_fill,q_auto/v1682058029/hero-img_hj2ahr.jpg');
@@ -119,6 +119,29 @@ header {
 .hours p {
     font-size: 4vw;
     margin-bottom: 10px;
+}
+
+/* -------------MENU----------------- */
+
+#menu {
+    padding: 50px;
+}
+
+.menu-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    text-decoration: underline;
+}
+
+p {
+    font-family: 'Lato';
 }
 
 /* -----------------------BUTTONS--------------------------------- */
