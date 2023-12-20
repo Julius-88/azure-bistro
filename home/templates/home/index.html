@@ -2,7 +2,15 @@
 {% load static %}
 
 {% block content %}
-<main>
-    <h1 class="text-center">Welcome to Azure Bistro</h1>
-</main>
+<section class="hero-section">
+    <h1 class="logo font-satisfy">Azure Bistro</h1>
+    <div class="hero-button-container">
+        <a href="{% url 'menu' %}" class="button hero-button">Menu</a>
+        <a href="{% url 'menu' %}#drinks" class="button hero-button">Drinks</a>
+    </div>
+    <div class="hours">
+        <p class="font-lato">Mon - Fri: 16:00 - 02:00</p>
+        <p class="font-lato">Sat - Sun: 18:00 - 00:00</p>
+    </div>
+</section>
 {% endblock %}
