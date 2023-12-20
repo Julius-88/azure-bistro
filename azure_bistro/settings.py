@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'cloudinary',
     'home',
+    'reservation',
 ]
 
 MIDDLEWARE = [
