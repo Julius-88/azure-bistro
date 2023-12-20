@@ -25,3 +25,25 @@ body {
 a:hover {
     color: #FF7F50;
 }
+
+
+/* -----------------------FONTS--------------------------------- */
+
+.font-satisfy {
+    font-family: 'Satisfy', cursive;
+    color: #007FFF;
+}
+
+.logo {
+    font-size: xx-large;
+}
+
+.font-lora {
+    font-family: 'Lora', serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.font-lato {
+    font-family: 'Lato';
+}
