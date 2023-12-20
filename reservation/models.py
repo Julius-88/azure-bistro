@@ -1,16 +1,17 @@
 from django.db import models
 from django.conf import settings
+from datetime import time
 from django.core.validators import MinValueValidator, MaxValueValidator
 
 
 TIME_CHOICES = [
-    ('18:00', '18:00'),
-    ('19:30', '19:30'),
-    ('20:00', '20:00'),
-    ('20:30', '20:30'),
-    ('21:00', '21:00'),
-    ('21:30', '21:30'),
-    ('22:00', '22:00'),
+    (time(18, 0), '18:00'),
+    (time(19, 30), '19:30'),
+    (time(20, 0), '20:00'),
+    (time(20, 30), '20:30'),
+    (time(21, 0), '21:00'),
+    (time(21, 30), '21:30'),
+    (time(22, 0), '22:00'),
 ]
 
 
