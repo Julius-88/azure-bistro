@@ -186,6 +186,41 @@ p {
 }
 
 
+/* -----------------------FOOTER--------------------------------- */
+
+footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #1C2E4A;
+    font-size: larger;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-media {
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.social-media:hover {
+    background-color: #FF7F50;
+
+}
+
+.copyright {
+    margin-top: 10px;
+    padding: 5px;
+    font-size: x-small;
+}
+
 /* -----------------------BUTTONS--------------------------------- */
 
 .button {

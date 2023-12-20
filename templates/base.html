@@ -15,6 +15,9 @@
     {% endblock %}
     <meta name="author" content="Azure Bistro">
     {% endblock %}
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/d5722e680c.js" crossorigin="anonymous"></script>
+    <!-- Global CSS -->
     <link rel="stylesheet" href="{% static 'css/global.css' %}">
     {% block extra_css %}
     {% endblock %}
@@ -45,7 +48,29 @@
     </header>
     {% block content %}
     {% endblock %}
-
+    <footer>
+        <address class="footer-middle">
+            <p class="font-lato">Arenavägen 69, 121 77 Johanneshov</p>
+            <p class="font-lato">Tel: 070-4567187</p>
+        </address>
+        <section class="footer-right">
+            <div class="social-media-container">
+                <a href="https://www.facebook.com/" aria-label="Click here to go to our Facebook page" title="Facebook"
+                    target="_blank" rel="noopener noreferrer" class="social-media"><i
+                        class="fab fa-facebook fa-lg"></i></a>
+                <a href="https://www.instagram.com/" aria-label="Click here to go to our Instagram page"
+                    title="Instagram" target="_blank" rel="noopener noreferrer" class="social-media"><i
+                        class="fab fa-instagram fa-lg"></i></a>
+                <a href="https://www.snapchat.com/" aria-label="Click here to go to our Snapchat page" title="Snapchat"
+                    target="_blank" rel="noopener noreferrer" class="social-media"><i
+                        class="fab fa-snapchat fa-lg"></i></a>
+                <a href="https://www.twitter.com/" aria-label="Click here to go to our Twitter page" title="Twitter"
+                    target="_blank" rel="noopener noreferrer" class="social-media"><i
+                        class="fab fa-twitter fa-lg"></i></a>
+            </div>
+            <p class="copyright font-lato">&copy; copyright 2023</p>
+        </section>
+    </footer>
     {% block extra_js %}
     {% endblock %}
 </body>
