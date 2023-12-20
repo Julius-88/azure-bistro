@@ -34,7 +34,7 @@
                 <ul>
                     <li><a href="{% url 'home' %}" class="font-lora">Home</a></li>
                     <li class="dropdown">
-                        <a href="{% url 'menu' %}" class="font-lora">Menu</a>
+                        <button class="font-lora dropdown-button">Menu</button>
                         <div class="dropdown-content">
                             <a href="{% url 'menu' %}#appetizers" class="font-lora">Appetizers</a>
                             <a href="{% url 'menu' %}#main-courses" class="font-lora">Main Courses</a>
@@ -44,8 +44,8 @@
                     </li>
                     <li><a href="{% url 'contact' %}" class="font-lora">Contact</a></li>
                     {% if user.is_authenticated %}
-                    <li class="dropdown font-lora" aria-label="Click here to go to the account page" title="Account">
-                        Account
+                    <li class="dropdown" aria-label="Click here to go to the account page" title="Account">
+                        <button class="dropdown-button font-lora">Account</button>
                         <div class="dropdown-content">
                             <a href="{% url 'account_logout' %}" class="font-lora">Sign Out</a>
                             <a href="#" class="font-lora">Manage Reservation</a>
