@@ -26,7 +26,6 @@ a:hover {
     color: #FF7F50;
 }
 
-
 /* -----------------------FONTS--------------------------------- */
 
 .font-satisfy {
@@ -46,4 +45,48 @@ a:hover {
 
 .font-lato {
     font-family: 'Lato';
+}
+
+/* ------------------------NAVBAR-------------------------------- */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar {
+    background-color: #1C2E4A;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 15px;
+    width: 100%;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar li {
+    margin: 15px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #1C2E4A;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
