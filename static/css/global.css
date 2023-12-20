@@ -90,3 +90,14 @@ header {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+/* ---------------------Media Queries----------------------------------- */
+
+@media screen and (max-width: 950px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: x-small;
+    }
+}
