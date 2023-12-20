@@ -42,6 +42,21 @@
                         </div>
                     </li>
                     <li><a href="{% url 'contact' %}" class="font-lora">Contact</a></li>
+                    {% if user.is_authenticated %}
+                    <li class="dropdown font-lora" aria-label="Click here to go to the account page" title="Account">
+                        Account
+                        <div class="dropdown-content">
+                            <a href="{% url 'account_logout' %}" class="font-lora">Sign Out</a>
+                            <a href="#" class="font-lora">Manage Reservation</a>
+                            <a class="font-lora {% if user.is_staff %} show {% else %} hide {% endif %}"
+                                href="{% url 'admin:index' %}">Admin
+                                Panel</a>
+                        </div>
+                    </li>
+                    {% else %}
+                    <li><a href="{% url 'account_login' %}" aria-label="Click here to go to the login page"
+                            title="Log in" class="font-lora">Log In</a></li>
+                    {% endif %}
                 </ul>
             </div>
         </nav>

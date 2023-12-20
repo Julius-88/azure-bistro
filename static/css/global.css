@@ -92,6 +92,14 @@ header {
     display: block;
 }
 
+.dropdown-content .show {
+    display: inline;
+}
+
+.dropdown-content .hide {
+    display: none;
+}
+
 /* ---------------------HERO Section-----------------------------------*/
 
 .hero-section {
