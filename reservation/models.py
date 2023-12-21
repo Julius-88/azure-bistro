@@ -14,6 +14,13 @@ TIME_CHOICES = [
     (time(22, 0), '22:00'),
 ]
 
+GUEST_CHOICES = [
+    (1, '1 Guest'),
+    (2, '2 Guest'),
+    (3, '3 Guest'),
+    (4, '4 Guest'),
+]
+
 
 class Reservation(models.Model):
     user = models.ForeignKey(
@@ -23,7 +30,8 @@ class Reservation(models.Model):
         validators=[
             MinValueValidator(1),
             MaxValueValidator(4)
-        ]
+        ],
+        choices=GUEST_CHOICES,
     )
     reservation_date = models.DateField()
     reservation_time = models.TimeField(choices=TIME_CHOICES)
@@ -32,7 +40,7 @@ class Reservation(models.Model):
 
     def __str__(self):
         return (
-            f'Reservation for {self.number_of_people} people on '
+            f'Reservation for {self.number_of_guests} guests on '
             f'{self.reservation_date} at {self.reservation_time} '
             f'by {self.user.username}'
         )

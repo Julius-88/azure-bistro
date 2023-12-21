@@ -266,7 +266,12 @@ footer {
 #id_email2,
 #id_username,
 #id_password1,
-#id_password2 {
+#id_password2,
+#id_reservation_date,
+#id_reservation_time,
+#id_reservation_time option,
+#id_number_of_guests,
+#id_number_of_guests option {
     padding: 5px;
     border-radius: 10px;
     border: none;
@@ -280,8 +285,15 @@ footer {
 #id_email2:focus-visible,
 #id_username:focus-visible,
 #id_password1:focus-visible,
-#id_password2:focus-visible {
+#id_password2:focus-visible,
+#id_reservation_date,
+#id_reservation_time,
+#id_number_of_guests {
     outline: 2px solid #FF7F50;
+}
+
+.errorlist li {
+    color: red;
 }
 
 /* ---------------------Media Queries----------------------------------- */

@@ -68,13 +68,20 @@
                                 class="font-lora {% if user.is_staff %} {% else %} hide {% endif %}">Admin
                                 Panel</a>
                         </div>
+                    <li>
+                        <a href="{% url 'reservation' %}" class="font-lora"
+                            aria-label="Click here to go to the reservation page" title="Reservation">Reservation
+                        </a>
+                    </li>
                     </li>
                     {% else %}
                     <li><a href="{% url 'account_login' %}" aria-label="Click here to go to the login page"
                             title="Log in" class="font-lora">Log In</a></li>
                     {% endif %}
                     <li><a href="{% url 'contact' %}" class="font-lora"
-                            aria-label="Click here to go to the contact page" title="Contact">Contact</a></li>
+                            aria-label="Click here to go to the contact page" title="Contact">Contact
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>
