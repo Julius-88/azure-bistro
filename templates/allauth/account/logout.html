@@ -11,7 +11,8 @@
     {% if redirect_field_value %}
     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
     {% endif %}
-    <button type="submit" class="button font-lora">Sign Out</button>
+    <button type="submit" class="button font-lora" aria-label="Click here to sign out" title="Sign Out">Sign
+      Out</button>
   </form>
 </section>
 

@@ -35,22 +35,35 @@
             </div>
             <div>
                 <ul>
-                    <li><a href="{% url 'home' %}" class="font-lora">Home</a></li>
+                    <li><a href="{% url 'home' %}" class="font-lora" aria-label="Click here to go to the home page"
+                            title="Home">Home</a></li>
                     <li class="dropdown">
-                        <button class="font-lora dropdown-button">Menu</button>
+                        <button class="font-lora dropdown-button"
+                            aria-label="Click or hover to expand menu options">Menu</button>
                         <div class="dropdown-content">
-                            <a href="{% url 'menu' %}#appetizers" class="font-lora">Appetizers</a>
-                            <a href="{% url 'menu' %}#main-courses" class="font-lora">Main Courses</a>
-                            <a href="{% url 'menu' %}#desserts" class="font-lora">Desserts</a>
-                            <a href="{% url 'menu' %}#drinks" class="font-lora">Drinks</a>
+                            <a href="{% url 'menu' %}#appetizers" class="font-lora"
+                                aria-label="Click here to go to the appetizers section of the menu"
+                                title="Appetizers">Appetizers</a>
+                            <a href="{% url 'menu' %}#main-courses" class="font-lora"
+                                aria-label="Click here to go to the main courses section of the menu"
+                                title="Main Courses">Main Courses</a>
+                            <a href="{% url 'menu' %}#desserts" class="font-lora"
+                                aria-label="Click here to go to the desserts section of the menu"
+                                title="Desserts">Desserts</a>
+                            <a href="{% url 'menu' %}#drinks" class="font-lora"
+                                aria-label="Click here to go to the drinks section of the menu"
+                                title="Drinks">Drinks</a>
                         </div>
                     </li>
                     {% if user.is_authenticated %}
-                    <li class="dropdown" aria-label="Click here to go to the account page" title="Account">
-                        <button class="dropdown-button font-lora">Account</button>
+                    <li class="dropdown">
+                        <button class="dropdown-button font-lora" aria-label="Click here to go to the account page"
+                            title="Account">Account</button>
                         <div class="dropdown-content">
-                            <a href="{% url 'account_logout' %}" class="font-lora">Sign Out</a>
-                            <a href="#" class="font-lora">Manage Reservation</a>
+                            <a href="{% url 'account_logout' %}" class="font-lora" aria-label="Click here to sign out"
+                                title="Sign Out">Sign Out</a>
+                            <a href="#" class="font-lora" aria-label="Click here to manage your reservation"
+                                title="Manage Reservation">Manage Reservation</a>
                             <a href="{% url 'admin:index' %}"
                                 class="font-lora {% if user.is_staff %} {% else %} hide {% endif %}">Admin
                                 Panel</a>
@@ -60,7 +73,8 @@
                     <li><a href="{% url 'account_login' %}" aria-label="Click here to go to the login page"
                             title="Log in" class="font-lora">Log In</a></li>
                     {% endif %}
-                    <li><a href="{% url 'contact' %}" class="font-lora">Contact</a></li>
+                    <li><a href="{% url 'contact' %}" class="font-lora"
+                            aria-label="Click here to go to the contact page" title="Contact">Contact</a></li>
                 </ul>
             </div>
         </nav>

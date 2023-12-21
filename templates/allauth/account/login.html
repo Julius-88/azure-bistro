@@ -12,14 +12,17 @@
     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
     {% endif %}
     <div class="d-flex flex-column align-items-center">
-      <div class="">
-        <a class="font-lora" href="{% url 'account_reset_password' %}">Forgot Password?</a>
+      <div>
+        <a class="font-lora" href="{% url 'account_reset_password' %}"
+          aria-label="Click here if you have forgotten your password" title="Forgot Password">Forgot Password?</a>
       </div>
       <div>
-        <a href="{{ signup_url }}" class="font-lora">Create Account</a>
+        <a href="{{ signup_url }}" aria-label="Click here to create an account" title="Create Account"
+          class="font-lora">Create Account</a>
       </div>
-      <div class="">
-        <button class="button font-lora" type="submit">Sign In</button>
+      <div>
+        <button class="button font-lora" aria-label="Click here to sign in to your account" title="Sign In"
+          type="submit">Sign In</button>
       </div>
     </div>
   </form>
