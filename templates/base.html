@@ -62,8 +62,9 @@
                         <div class="dropdown-content">
                             <a href="{% url 'account_logout' %}" class="font-lora" aria-label="Click here to sign out"
                                 title="Sign Out">Sign Out</a>
-                            <a href="#" class="font-lora" aria-label="Click here to manage your reservation"
-                                title="Manage Reservation">Manage Reservation</a>
+                            <a href="{% url 'manage_reservation' %}" class="font-lora"
+                                aria-label="Click here to manage your reservation" title="Manage Reservation">Manage
+                                Reservation</a>
                             <a href="{% url 'admin:index' %}"
                                 class="font-lora {% if user.is_staff %} {% else %} hide {% endif %}">Admin
                                 Panel</a>
