@@ -19,7 +19,7 @@ class Reservation(models.Model):
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE)
-    number_of_people = models.IntegerField(
+    number_of_guests = models.IntegerField(
         validators=[
             MinValueValidator(1),
             MaxValueValidator(4)
