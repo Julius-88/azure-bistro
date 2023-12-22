@@ -9,8 +9,9 @@
     <ul class="mx-3">
         {% for reservation in reservations %}
         <li>
-            Reservation for {{ reservation.number_of_guests }} guests on {{ reservation.reservation_date }} at
-            {{ reservation.reservation_time }}.
+            Reservation for {{ reservation.number_of_guests }} guests on {{ reservation.reservation_date|date:'d-m-Y' }}
+            at
+            {{ reservation.reservation_time|date:'H:i' }}.
         </li>
         {% endfor %}
     </ul>
