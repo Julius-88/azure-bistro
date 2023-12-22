@@ -7,4 +7,8 @@ urlpatterns = [
         'manage_reservation/',
         views.manage_reservation,
         name='manage_reservation'),
+    path(
+        'confirm_delete_reservation/<int:reservation_id>/',
+        views.confirm_delete_reservation,
+        name='confirm_delete_reservation'),
 ]

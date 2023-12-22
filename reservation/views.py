@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .forms import ReservationForm
 from .models import Reservation
 from django.contrib import messages
@@ -47,6 +47,20 @@ def manage_reservation(request):
         request,
         'reservation/manage_reservation.html',
         {'reservations': user_reservations})
+
+
+def confirm_delete_reservation(request, reservation_id):
+    reservation = get_object_or_404(
+        Reservation, id=reservation_id, user=request.user)
+    if request.method == 'POST':
+        reservation.delete()
+        messages.success(request, 'Reservation successfully deleted.')
+        return redirect('manage_reservation')
+
+    return render(
+        request,
+        'reservation/confirm_delete_reservation.html',
+        {'reservation': reservation})
 
 
 """

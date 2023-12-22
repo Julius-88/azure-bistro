@@ -12,6 +12,7 @@
             Reservation for {{ reservation.number_of_guests }} guests on {{ reservation.reservation_date|date:'d-m-Y' }}
             at
             {{ reservation.reservation_time|date:'H:i' }}.
+            <a href="{% url 'confirm_delete_reservation' reservation.id %}">Delete Reservation</a>
         </li>
         {% endfor %}
     </ul>

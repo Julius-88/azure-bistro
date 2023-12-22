@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_title %}| Delete Reservation{% endblock %}
+
+{% block content %}
+<section class="d-flex flex-column justify-content-center align-items-center h-100">
+    <h1 class="mb-5 font-lora">Confirm Reservation Deletion</h1>
+    <p>Are you sure you want to delete this reservation for {{ reservation.number_of_guests }} guests on
+        {{ reservation.reservation_date|date:"d-m-Y" }} at {{ reservation.reservation_time|date:"H:i" }}?</p>
+    <form action="{% url 'confirm_delete_reservation' reservation.id %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="button font-lato">Confirm Delete</button>
+    </form>
+    <a href="{% url 'manage_reservation' %}">Cancel</a>
+</section>
+{% endblock %}
