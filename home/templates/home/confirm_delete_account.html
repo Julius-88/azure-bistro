@@ -12,8 +12,10 @@
         {% csrf_token %}
         {{ form.as_p }}
         <div class="">
-            <a href="{% url 'home' %}" class="button font-lato">Cancel</a>
-            <button type="submit" class="button font-lato">Confirm</button>
+            <a href="{% url 'home' %}" class="button font-lato" aria-label="Click here to cancel account deletion"
+                title="Cancel">Cancel</a>
+            <button type="submit" class="button font-lato" aria-label="Click here to confirm account deletion"
+                title="Confirm">Confirm</button>
         </div>
     </form>
 </section>

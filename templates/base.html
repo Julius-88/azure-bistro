@@ -29,11 +29,14 @@
 
 <body>
     <header>
-        <nav class="navbar">
-            <div>
-                <a href="{% url 'home' %}" class="font-satisfy logo">Azure Bistro</a>
-            </div>
-            <div>
+        <a href="{% url 'home' %}" class="font-satisfy logo text-center" title="Azure Bistro"
+            aria-label="Click here to go to the home page">Azure Bistro</a>
+        <nav class="navbar navbar-expand-sm">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+                aria-controls="navbarToggler" aria-expanded="false" aria-label="Show navigation bar">
+                <span><i class="fas fa-bars"></i></span>
+            </button>
+            <div class=" collapse navbar-collapse justify-content-center w-100 " id="navbarToggler">
                 <ul>
                     <li><a href="{% url 'home' %}" class="font-lora" aria-label="Click here to go to the home page"
                             title="Home">Home</a></li>
