@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extra_title %}| Update Reservation{% endblock %}
+{% block content %}
+<section class="update-reservation-section">
+    <h2>Update Reservation</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Update Reservation</button>
+    </form>
+</section>
+{% endblock %}

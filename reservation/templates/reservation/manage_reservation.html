@@ -3,6 +3,13 @@
 {% block extra_title %}| Manage Reservation{% endblock %}
 
 {% block content%}
+{% if messages %}
+<div class="messages">
+    {% for message in messages %}
+    <div class="{{ message.tags }} text-center">{{ message }}</div>
+    {% endfor %}
+</div>
+{% endif %}
 {% if reservations %}
 <section class="d-flex flex-column justify-content-center align-items-center h-100">
     <h1 class="mb-5 font-lora">Your Reservations</h1>
@@ -12,6 +19,7 @@
             Reservation for {{ reservation.number_of_guests }} guests on {{ reservation.reservation_date|date:'d-m-Y' }}
             at
             {{ reservation.reservation_time|date:'H:i' }}.
+            <a href="{% url 'update_reservation' reservation.id %}">Edit Reservation</a>
             <a href="{% url 'confirm_delete_reservation' reservation.id %}">Delete Reservation</a>
         </li>
         {% endfor %}

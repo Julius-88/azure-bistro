@@ -63,6 +63,27 @@ def confirm_delete_reservation(request, reservation_id):
         {'reservation': reservation})
 
 
+def update_reservation(request, reservation_id):
+    reservation = get_object_or_404(
+        Reservation,
+        id=reservation_id,
+        user=request.user)
+
+    if request.method == 'POST':
+        form = ReservationForm(request.POST, instance=reservation)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your reservation has been updated.')
+            return redirect('manage_reservation')
+    else:
+        form = ReservationForm(instance=reservation)
+
+    return render(
+        request,
+        'reservation/update_reservation.html',
+        {'form': form, 'reservation_id': reservation_id})
+
+
 """
 These resources have been used in order to create the above code.
 https://docs.djangoproject.com/en/5.0/topics/forms/

@@ -11,4 +11,8 @@ urlpatterns = [
         'confirm_delete_reservation/<int:reservation_id>/',
         views.confirm_delete_reservation,
         name='confirm_delete_reservation'),
+    path(
+        'update_reservation/<int:reservation_id>/',
+        views.update_reservation,
+        name='update_reservation'),
 ]
