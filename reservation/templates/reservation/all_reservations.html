@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_title %}| All Reservations{% endblock %}
+
+{% block content %}
+<h1>All Reservations</h1>
+<table>
+    <tr>
+        <th>User</th>
+        <th>Number of Guests</th>
+        <th>Date</th>
+        <th>Time</th>
+    </tr>
+    {% for reservation in reservations %}
+    <tr>
+        <td>{{ reservation.user.username }}</td>
+        <td>{{ reservation.number_of_guests }}</td>
+        <td>{{ reservation.reservation_date }}</td>
+        <td>{{ reservation.reservation_time }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

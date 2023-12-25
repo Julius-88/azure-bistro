@@ -84,6 +84,14 @@ def update_reservation(request, reservation_id):
         {'form': form, 'reservation_id': reservation_id})
 
 
+def all_reservations(request):
+    reservations = Reservation.objects.all().order_by(
+        '-reservation_date', '-reservation_time')
+    return render(
+        request,
+        'reservation/all_reservations.html', {'reservations': reservations})
+
+
 """
 These resources have been used in order to create the above code.
 https://docs.djangoproject.com/en/5.0/topics/forms/

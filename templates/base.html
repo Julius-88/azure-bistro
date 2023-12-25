@@ -65,14 +65,17 @@
                         <div class="dropdown-content">
                             <a href="{% url 'account_logout' %}" class="font-lora" aria-label="Click here to sign out"
                                 title="Sign Out">Sign Out</a>
+                            <a href="{% url 'admin:index' %}"
+                                class="font-lora {% if user.is_staff %} {% else %} hide {% endif %}">Admin
+                                Panel</a>
+                            <a href="{% url 'all_reservations' %}"
+                                class="font-lora {% if user.is_staff %} {% else %} hide {% endif %}">All
+                                Reservations</a>
                             <a href="{% url 'manage_reservation' %}" class="font-lora"
                                 aria-label="Click here to manage your reservation" title="Manage Reservation">Manage
                                 Reservation</a>
                             <a class="font-lora" href="{% url 'confirm_delete_account' %}" title="Delete Account"
                                 aria-label="Click here to delete your account">Delete Account</a>
-                            <a href="{% url 'admin:index' %}"
-                                class="font-lora {% if user.is_staff %} {% else %} hide {% endif %}">Admin
-                                Panel</a>
                         </div>
                     <li>
                         <a href="{% url 'reservation' %}" class="font-lora"

@@ -15,4 +15,5 @@ urlpatterns = [
         'update_reservation/<int:reservation_id>/',
         views.update_reservation,
         name='update_reservation'),
+    path('all_reservations', views.all_reservations, name='all_reservations'),
 ]
