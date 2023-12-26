@@ -3,21 +3,20 @@
 {% block content %}
 
 <section class="d-flex flex-column justify-content-center align-items-center h-100">
-  <h1 class="mb-5 font-lora">Sign Up</h1>
-
-  <p class="text-center mx-2">
-    Already have an account? Then click
-    <a href="{{ login_url }}">here</a>
-    to sign in.
+  <h1 class="mb-5 font-lora text-center">Sign Up</h1>
+  <p class="text-center mx-2 font-lato">
+    Already have an account? Then
+    <a href="{{ login_url }}" aria-label="sign in to your account">sign in.</a>
   </p>
-
-  <form class="signup mx-3" id="signup_form" method="post" action="{% url 'account_signup' %}">
+  <form class="mx-3" method="POST" action="{% url 'account_signup' %}">
     {% csrf_token %}
     {{ form.as_p }}
     {% if redirect_field_value %}
     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
     {% endif %}
-    <button type="submit" class="button font-lora">Sign Up</button>
+    <div class="d-flex justify-content-center mb-2">
+      <button type="submit" class="button font-lato">Sign Up</button>
+    </div>
   </form>
 </section>
 {% endblock %}
