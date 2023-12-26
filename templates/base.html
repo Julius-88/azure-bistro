@@ -37,59 +37,44 @@
             </button>
             <div class=" collapse navbar-collapse justify-content-center w-100 " id="navbarToggler">
                 <ul>
-                    <li><a href="{% url 'home' %}" class="font-lora" aria-label="Click here to go to the home page"
-                            title="Home">Home</a></li>
+                    <li><a href="{% url 'home' %}" class="font-lora">Home</a></li>
                     <li class="dropdown">
                         <button class="font-lora dropdown-button"
                             aria-label="Click or hover to expand menu options">Menu</button>
                         <div class="dropdown-content">
                             <a href="{% url 'menu' %}#appetizers" class="font-lora"
-                                aria-label="Click here to go to the appetizers section of the menu"
-                                title="Appetizers">Appetizers</a>
+                                aria-label="Click here to go to the appetizers section of the menu">Appetizers</a>
                             <a href="{% url 'menu' %}#main-courses" class="font-lora"
-                                aria-label="Click here to go to the main courses section of the menu"
-                                title="Main Courses">Main Courses</a>
+                                aria-label="Click here to go to the main courses section of the menu">Main Courses</a>
                             <a href="{% url 'menu' %}#desserts" class="font-lora"
-                                aria-label="Click here to go to the desserts section of the menu"
-                                title="Desserts">Desserts</a>
+                                aria-label="Click here to go to the desserts section of the menu">Desserts</a>
                             <a href="{% url 'menu' %}#drinks" class="font-lora"
-                                aria-label="Click here to go to the drinks section of the menu"
-                                title="Drinks">Drinks</a>
+                                aria-label="Click here to go to the drinks section of the menu">Drinks</a>
                         </div>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="dropdown">
-                        <button class="dropdown-button font-lora" aria-label="Click here to go to the account page"
-                            title="Account">Account</button>
+                        <button class="dropdown-button font-lora">Account</button>
                         <div class="dropdown-content">
-                            <a href="{% url 'account_logout' %}" class="font-lora" aria-label="Click here to sign out"
-                                title="Sign Out">Sign Out</a>
+                            <a href="{% url 'account_logout' %}" class="font-lora">Sign Out</a>
                             <a href="{% url 'admin:index' %}"
                                 class="font-lora {% if user.is_staff %} {% else %} hide {% endif %}">Admin
                                 Panel</a>
                             <a href="{% url 'all_reservations' %}"
                                 class="font-lora {% if user.is_staff %} {% else %} hide {% endif %}">All
                                 Reservations</a>
-                            <a href="{% url 'manage_reservation' %}" class="font-lora"
-                                aria-label="Click here to manage your reservation" title="Manage Reservation">Manage
-                                Reservation</a>
-                            <a class="font-lora" href="{% url 'confirm_delete_account' %}" title="Delete Account"
-                                aria-label="Click here to delete your account">Delete Account</a>
+                            <a href="{% url 'manage_reservation' %}" class="font-lora">Manage Reservation</a>
+                            <a class="font-lora" href="{% url 'confirm_delete_account' %}">Delete Account</a>
                         </div>
                     <li>
-                        <a href="{% url 'reservation' %}" class="font-lora"
-                            aria-label="Click here to go to the reservation page" title="Reservation">Reservation
-                        </a>
+                        <a href="{% url 'reservation' %}" class="font-lora">Reservation</a>
                     </li>
                     </li>
                     {% else %}
-                    <li><a href="{% url 'account_login' %}" aria-label="Click here to go to the login page"
-                            title="Log in" class="font-lora">Log In</a></li>
-                    {% endif %}
-                    <li><a href="{% url 'contact' %}" class="font-lora"
-                            aria-label="Click here to go to the contact page" title="Contact">Contact
-                        </a>
+                    <li>
+                        <a href="{% url 'account_login' %}" class="font-lora">Log In</a>
                     </li>
+                    {% endif %}
                 </ul>
             </div>
         </nav>
@@ -100,6 +85,7 @@
         <address class="footer-middle">
             <p class="font-lato">Arenavägen 69, 121 77 Johanneshov</p>
             <p class="font-lato">Tel: 070-4567187</p>
+            <p class="font-lato">Email: azure.bistro.sample2@gmail.com</p>
         </address>
         <section class="footer-right">
             <div class="social-media-container">

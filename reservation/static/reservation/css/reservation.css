@@ -1,0 +1,25 @@
+/* -------------ALL RESERVATIONS------------------------ */
+
+/* --------Mobile View--------- */
+.card {
+    background-color: transparent;
+    border: none;
+    align-items: center;
+}
+
+.card-body {
+    width: 100%;
+}
+
+hr {
+    border: 1px solid white;
+}
+
+/* -------Desktop View---------- */
+
+.table,
+.table td,
+.table th,
+.table thead th {
+    border: none;
+}
