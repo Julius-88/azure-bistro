@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock %}
 {% block extra_title %}| All Reservations{% endblock %}
 
 {% block content %}
@@ -10,25 +13,56 @@
     {% endfor %}
 </div>
 {% endif %}
-<h1>All Reservations</h1>
-<table>
-    <tr>
-        <th>User</th>
-        <th>Number of Guests</th>
-        <th>Date</th>
-        <th>Time</th>
-    </tr>
+<h1 class="mb-5 font-lora text-center">All Reservations</h1>
+<div class="d-block d-md-none">
     {% for reservation in reservations %}
-    <tr>
-        <td>{{ reservation.user.username }}</td>
-        <td>{{ reservation.number_of_guests }}</td>
-        <td>{{ reservation.reservation_date|date:'d-m-Y' }}</td>
-        <td>{{ reservation.reservation_time|date:'H:i' }}</td>
-        <td>
-            <a href="{% url 'admin_update_reservation' reservation.id %}">Edit</a>
-            <a href="{% url 'admin_delete_reservation' reservation.id %}">Delete</a>
-        </td>
-    </tr>
+    <div class="card mb-3">
+        <div class="card-body">
+            <p class="card-text font-lato">User: {{ reservation.user.username }}</p>
+            <p class="card-text font-lato">Guests: {{ reservation.number_of_guests }}</p>
+            <p class="card-text font-lato">Date: {{ reservation.reservation_date|date:'d-m-Y' }}</p>
+            <p class="card-text font-lato">Time: {{ reservation.reservation_time|date:'H:i' }}</p>
+            <div class="d-flex justify-content-between">
+                <div>
+                    <a href="{% url 'admin_update_reservation' reservation.id %}" class="font-lato">Edit</a>
+                </div>
+                <div>
+                    <a href="{% url 'admin_delete_reservation' reservation.id %}" class="font-lato">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
     {% endfor %}
-</table>
+</div>
+
+<div class="table-responsive d-none d-md-block">
+    <table class="table">
+        <thead class="font-lora">
+            <tr>
+                <th scope="col">User</th>
+                <th scope="col">Number of Guests</th>
+                <th scope="col">Date</th>
+                <th scope="col">Time</th>
+                <th scope="col" colspan="2">Actions</th>
+            </tr>
+        </thead>
+        {% for reservation in reservations %}
+        <tbody class="font-lato">
+            <tr>
+                <td>{{ reservation.user.username }}</td>
+                <td>{{ reservation.number_of_guests }}</td>
+                <td>{{ reservation.reservation_date|date:'d-m-Y' }}</td>
+                <td>{{ reservation.reservation_time|date:'H:i' }}</td>
+                <td>
+                    <a href="{% url 'admin_update_reservation' reservation.id %}">Edit</a>
+                </td>
+                <td>
+                    <a href="{% url 'admin_delete_reservation' reservation.id %}">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+</div>
 {% endblock %}
