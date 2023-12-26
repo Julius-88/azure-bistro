@@ -1,3 +1,15 @@
+# Azure Bistro
+
+Welcome to Azure Bistro, an enchanting restaurant management application developed using Django. This project promises an unforgettable user experience, catering to people of all ages looking to explore new culinary delights.
+
+Azure Bistro is not just about dining; it's about convenience and simplicity. Users can effortlessly create an account, make a reservation, and modify their details as needed. The application is designed with user-friendly interfaces and features that appeal to a diverse audience, from tech-savvy youths to the elderly who appreciate simplicity.
+
+As a school project, Azure Bistro is a testament to the application of Django in creating dynamic web applications. It showcases key functionalities such as user authentication, database management, and responsive web design, aiming to provide a comprehensive learning experience.
+
+Dive into Azure Bistro and discover a world where technology meets culinary artistry!
+
+[Azure Bistro - Deployed Site](https://azure-bistro-v2-df04593043a2.herokuapp.com/)
+
 # Deployment to Heroku
 
 This README outlines the steps necessary to deploy an application to Heroku. It is designed as a guide for users looking to deploy their own applications using Heroku's platform.
