@@ -61,3 +61,22 @@
 .drinks {
     background-color: rgba(0, 127, 255, 20%);
 }
+
+/* -------------MENU----------------- */
+
+#menu {
+    padding: 50px;
+}
+
+.menu-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    text-decoration: underline;
+}
