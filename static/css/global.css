@@ -47,6 +47,7 @@ a:hover {
     font-family: 'Lora', serif;
     text-transform: uppercase;
     letter-spacing: 1px;
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
 }
 
 .font-lato {
@@ -84,7 +85,6 @@ header {
 .dropdown-button {
     border: none;
     background-color: inherit;
-    font-size: medium;
 }
 
 .dropdown-content {
@@ -317,10 +317,6 @@ footer {
 
     .navbar li {
         margin: 10px;
-        font-size: x-small;
-    }
-
-    .dropdown-button {
         font-size: x-small;
     }
 

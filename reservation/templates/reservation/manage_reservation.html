@@ -12,15 +12,22 @@
 {% endif %}
 {% if reservations %}
 <section class="d-flex flex-column justify-content-center align-items-center h-100">
-    <h1 class="mb-5 font-lora">Your Reservations</h1>
+    <h1 class="mb-5 font-lora text-center">Your Reservations</h1>
     <ul class="mx-3">
         {% for reservation in reservations %}
-        <li>
+        <li class="font-lato">
             Reservation for {{ reservation.number_of_guests }} guests on {{ reservation.reservation_date|date:'d-m-Y' }}
             at
             {{ reservation.reservation_time|date:'H:i' }}.
-            <a href="{% url 'update_reservation' reservation.id %}">Edit Reservation</a>
-            <a href="{% url 'confirm_delete_reservation' reservation.id %}">Delete Reservation</a>
+            <div class="d-flex justify-content-between">
+                <div>
+                    <a href="{% url 'update_reservation' reservation.id %}">Edit Reservation</a>
+                </div>
+                <div>
+                    <a href="{% url 'confirm_delete_reservation' reservation.id %}">Delete Reservation</a>
+                </div>
+            </div>
+            <hr class="alert-light">
         </li>
         {% endfor %}
     </ul>
