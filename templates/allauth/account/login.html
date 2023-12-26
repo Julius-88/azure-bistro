@@ -1,26 +1,26 @@
 {% extends "base.html" %}
+{% load static %}
+
 {% block extra_title %}| Sign In{% endblock %}
 
 {% block content %}
-
 <section class="d-flex flex-column justify-content-center align-items-center h-100">
-  <h1 class="mb-5">Sign In</h1>
-  <form method="POST" action="{% url 'account_login' %}">
+  <h1 class="mb-5 font-lora">Sign In</h1>
+
+  <form method="POST" class="mx-3" action="{% url 'account_login' %}">
     {% csrf_token %}
     {{ form.as_p }}
     {% if redirect_field_value %}
     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
     {% endif %}
     <div class="d-flex flex-column align-items-center">
-      <div>
-        <a href="{{ signup_url }}" aria-label="Click here to create an account" title="Create Account"
-          class="font-lora">Create Account</a>
+      <div class="mb-3">
+        <a href="{{ signup_url }}" class="font-lato">Create Account</a>
       </div>
       <div>
-        <button class="button font-lora" aria-label="Click here to sign in to your account" title="Sign In"
-          type="submit">Sign In</button>
+        <button class="button font-lora" type="submit">Sign In</button>
       </div>
-      <p class="text-center">Please contact us if you have forgotten your password.</p>
+      <p class="text-center mx-2 font-lato">Please contact us if you have forgotten your password.</p>
     </div>
   </form>
 </section>

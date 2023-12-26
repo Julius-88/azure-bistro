@@ -32,3 +32,26 @@ This README outlines the steps necessary to deploy an application to Heroku. It 
 - Scroll down to *Manual deploy* and click on the *Deploy Branch* button to initiate the deployment process.
 
 ![Heroku Deploy Branch Button](./media/heroku-deploy-button.JPG)
+
+# Recources used
+- [Django Project - Forms](https://docs.djangoproject.com/en/5.0/topics/forms/)
+
+- [Django Project - Widgets](https://docs.djangoproject.com/en/5.0/ref/forms/widgets/)
+
+- [Django Project - Validation](https://docs.djangoproject.com/en/5.0/ref/forms/validation/)
+
+- [Django Project - Models](https://docs.djangoproject.com/en/5.0/topics/db/models/)
+
+- [Django Project - Queries](https://docs.djangoproject.com/en/5.0/topics/db/queries/)
+
+- [Django Project - Request-Response](https://docs.djangoproject.com/en/5.0/ref/request-response/)
+
+- [Django Project - Messages](https://docs.djangoproject.com/en/5.0/ref/contrib/messages/)
+
+- [Python - Datetime](https://docs.python.org/3/library/datetime.html)
+
+- [Geeks For Geeks - args-kwargs-python](https://www.geeksforgeeks.org/args-kwargs-python/)
+
+- [Youtube - Booking System For A Health Clinic](https://www.youtube.com/watch?v=s5xbtuo9pR0&t=102s)
+
+- Conde Institute Projects - I think therefore I blog and Hello Django

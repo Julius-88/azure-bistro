@@ -83,6 +83,8 @@ def update_reservation(request, reservation_id):
         'reservation/update_reservation.html',
         {'form': form, 'reservation_id': reservation_id})
 
+# Admin Section
+
 
 def all_reservations(request):
     reservations = Reservation.objects.all().order_by(
@@ -120,19 +122,3 @@ def admin_delete_reservation(request, reservation_id):
         request,
         'reservation/admin_delete_reservation.html',
         {'reservation': reservation})
-
-
-"""
-These resources have been used in order to create the above code.
-https://docs.djangoproject.com/en/5.0/topics/forms/
-https://docs.djangoproject.com/en/5.0/ref/forms/widgets/
-https://docs.djangoproject.com/en/5.0/ref/forms/validation/
-https://docs.djangoproject.com/en/5.0/topics/db/models/
-https://docs.djangoproject.com/en/5.0/topics/db/queries/
-https://docs.djangoproject.com/en/5.0/ref/request-response/
-https://docs.python.org/3/library/datetime.html
-https://docs.djangoproject.com/en/5.0/ref/contrib/messages/
-https://www.youtube.com/watch?v=s5xbtuo9pR0&t=102s
-Code Institute: I think therefore I blog, Hello Django
-
-"""

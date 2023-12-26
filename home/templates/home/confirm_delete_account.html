@@ -9,7 +9,7 @@
     <p class="text-center mx-2 font-lato">
         Are you sure you want to delete your account?
     </p>
-    <form action="{% url 'confirm_delete_account' %}" method="post">
+    <form action="{% url 'confirm_delete_account' %}" method="POST">
         {% csrf_token %}
         {{ form.as_p }}
         <div class="d-flex flex-column align-items-center">
