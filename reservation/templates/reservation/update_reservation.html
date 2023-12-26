@@ -4,7 +4,7 @@
 {% block content %}
 <section class="d-flex flex-column justify-content-center align-items-center h-100">
     <h1 class="mb-5 font-lora text-center">Update Reservation</h1>
-    <form class="mx-3" method="post">
+    <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
         <div class="d-flex flex-column align-items-center">

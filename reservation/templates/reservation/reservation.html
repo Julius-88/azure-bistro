@@ -8,10 +8,12 @@
 {% endfor %}
 <section class="d-flex flex-column justify-content-center align-items-center h-100">
     <h1 class="mb-5 font-lora">Reservation</h1>
-    <form class="mx-3" method="POST">
+    <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="button font-lora">Book Now</button>
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="button font-lato">Book Now</button>
+        </div>
     </form>
 </section>
 {% endblock %}

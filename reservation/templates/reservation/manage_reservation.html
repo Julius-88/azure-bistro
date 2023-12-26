@@ -21,10 +21,11 @@
             {{ reservation.reservation_time|date:'H:i' }}.
             <div class="d-flex justify-content-between">
                 <div>
-                    <a href="{% url 'update_reservation' reservation.id %}">Edit Reservation</a>
+                    <a href="{% url 'update_reservation' reservation.id %}" class="font-lato">Edit Reservation</a>
                 </div>
                 <div>
-                    <a href="{% url 'confirm_delete_reservation' reservation.id %}">Delete Reservation</a>
+                    <a href="{% url 'confirm_delete_reservation' reservation.id %}" class="font-lato">Delete
+                        Reservation</a>
                 </div>
             </div>
             <hr class="alert-light">
