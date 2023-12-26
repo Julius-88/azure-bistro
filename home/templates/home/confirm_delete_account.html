@@ -4,18 +4,23 @@
 
 {% block content %}
 <section class="d-flex flex-column justify-content-center align-items-center h-100">
-    <h1 class="mb-5 font-lora">Confirm Delete</h1>
-    <p class="text-center mx-2 font-lato">Are you sure you want to delete your account? This action cannot be undone.
+    <h1 class="mb-5 font-lora text-center">Confirm Account Deletion</h1>
+    <p class="text-center mx-2 font-lato">
+        Are you sure you want to delete your account?
     </p>
-
     <form action="{% url 'confirm_delete_account' %}" class="mx-3" method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <div class="">
-            <a href="{% url 'home' %}" class="button font-lato"
-                aria-label="Click here to cancel account deletion">Cancel</a>
-            <button type="submit" class="button font-lato"
-                aria-label="Click here to confirm account deletion">Confirm</button>
+        <div class="d-flex flex-column align-items-center">
+            <div>
+                <button type="submit" class="button font-lato">
+                    Confirm Account Deletion
+                </button>
+            </div>
+            <div class="mt-3">
+                <a href="{% url 'home' %}" class="text-center font-lato">Cancel</a>
+            </div>
+
         </div>
     </form>
 </section>
