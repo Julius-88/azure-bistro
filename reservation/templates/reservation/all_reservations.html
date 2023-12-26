@@ -3,6 +3,13 @@
 {% block extra_title %}| All Reservations{% endblock %}
 
 {% block content %}
+{% if messages %}
+<div class="messages">
+    {% for message in messages %}
+    <div class="{{ message.tags }} text-center">{{ message }}</div>
+    {% endfor %}
+</div>
+{% endif %}
 <h1>All Reservations</h1>
 <table>
     <tr>
@@ -15,8 +22,12 @@
     <tr>
         <td>{{ reservation.user.username }}</td>
         <td>{{ reservation.number_of_guests }}</td>
-        <td>{{ reservation.reservation_date }}</td>
-        <td>{{ reservation.reservation_time }}</td>
+        <td>{{ reservation.reservation_date|date:'d-m-Y' }}</td>
+        <td>{{ reservation.reservation_time|date:'H:i' }}</td>
+        <td>
+            <a href="{% url 'admin_update_reservation' reservation.id %}">Edit</a>
+            <a href="{% url 'admin_delete_reservation' reservation.id %}">Delete</a>
+        </td>
     </tr>
     {% endfor %}
 </table>

@@ -92,6 +92,36 @@ def all_reservations(request):
         'reservation/all_reservations.html', {'reservations': reservations})
 
 
+def admin_update_reservation(request, reservation_id):
+    reservation = get_object_or_404(Reservation, id=reservation_id)
+
+    if request.method == 'POST':
+        form = ReservationForm(request.POST, instance=reservation)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Reservation updated successfully!')
+            return redirect('all_reservations')
+    else:
+        form = ReservationForm(instance=reservation)
+
+    return render(
+        request, 'reservation/admin_update_reservation.html', {'form': form})
+
+
+def admin_delete_reservation(request, reservation_id):
+    reservation = get_object_or_404(Reservation, id=reservation_id)
+
+    if request.method == 'POST':
+        reservation.delete()
+        messages.success(request, 'Reservation successfully deleted!')
+        return redirect('all_reservations')
+
+    return render(
+        request,
+        'reservation/admin_delete_reservation.html',
+        {'reservation': reservation})
+
+
 """
 These resources have been used in order to create the above code.
 https://docs.djangoproject.com/en/5.0/topics/forms/
@@ -99,6 +129,7 @@ https://docs.djangoproject.com/en/5.0/ref/forms/widgets/
 https://docs.djangoproject.com/en/5.0/ref/forms/validation/
 https://docs.djangoproject.com/en/5.0/topics/db/models/
 https://docs.djangoproject.com/en/5.0/topics/db/queries/
+https://docs.djangoproject.com/en/5.0/ref/request-response/
 https://docs.python.org/3/library/datetime.html
 https://docs.djangoproject.com/en/5.0/ref/contrib/messages/
 https://www.youtube.com/watch?v=s5xbtuo9pR0&t=102s

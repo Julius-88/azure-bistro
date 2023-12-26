@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_title %}| Delete Reservations{% endblock %}
+{% block content %}
+<p>Are you sure you want to delete this reservation?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Confirm Delete</button>
+</form>
+{% endblock %}
