@@ -45,6 +45,26 @@ This README outlines the steps necessary to deploy an application to Heroku. It 
 
 ![Heroku Deploy Branch Button](./media/heroku-deploy-button.JPG)
 
+# Testing
+
+## Lighthouse
+
+Home Page - Desktop View
+
+![Home Page - Desktop View](./media/lighthouse-index.JPG)
+
+Home Page - Mobile View
+
+![Home Page - Mobile View](./media/lighthouse-index-mobile.JPG)
+
+Menu Page - Desktop View
+
+![Menu Page - Desktop View](./media/lighthouse-menu.JPG)
+
+Menu Page - Mobile View
+
+![Menu Page - Mobile View](./media/lighthouse-menu-mobile.JPG)
+
 # Recources used
 - [Django Project - Forms](https://docs.djangoproject.com/en/5.0/topics/forms/)
 

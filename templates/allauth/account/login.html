@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block extra_title %}| Sign In{% endblock %}
+{% block extra_title %}| Log In{% endblock %}
 
 {% block content %}
 <section class="d-flex flex-column justify-content-center align-items-center h-100">
-  <h1 class="mb-5 font-lora">Sign In</h1>
+  <h1 class="mb-5 font-lora">Log In</h1>
 
   <form method="POST" class="mx-3" action="{% url 'account_login' %}">
     {% csrf_token %}
@@ -18,7 +18,7 @@
         <a href="{{ signup_url }}" class="font-lato">Create Account</a>
       </div>
       <div>
-        <button class="button font-lora" type="submit">Sign In</button>
+        <button class="button font-lora" type="submit">Login</button>
       </div>
       <p class="text-center mx-2 font-lato">Please contact us if you have forgotten your password.</p>
     </div>
