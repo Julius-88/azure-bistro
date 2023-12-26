@@ -49,21 +49,111 @@ This README outlines the steps necessary to deploy an application to Heroku. It 
 
 ## Lighthouse
 
-Home Page - Desktop View
+Lighthouse is an open-source tool for improving the quality of web pages. It provides audits for performance, accessibility, progressive web apps, and more. Below are the Lighthouse test results for the Azure Bistro website.
+
+**Home Page - Desktop View**
 
 ![Home Page - Desktop View](./media/lighthouse-index.JPG)
 
-Home Page - Mobile View
+**Home Page - Mobile View**
 
 ![Home Page - Mobile View](./media/lighthouse-index-mobile.JPG)
 
-Menu Page - Desktop View
+**Menu Page - Desktop View**
 
 ![Menu Page - Desktop View](./media/lighthouse-menu.JPG)
 
-Menu Page - Mobile View
+**Menu Page - Mobile View**
 
 ![Menu Page - Mobile View](./media/lighthouse-menu-mobile.JPG)
+
+**Login Page - Desktop View**
+
+![Login Page - Desktop View](./media/lighthouse-login.JPG)
+
+**Login Page - Mobile View**
+
+![Login Page - Mobile View](./media/lighthouse-login-mobile.JPG)
+
+**Sign Up Page - Desktop View**
+
+![Sign Up Page - Desktop View](./media/lighthouse-signup.JPG)
+
+**Sign Up Page - Mobile View**
+
+![Sign Up Page - Mobile View](./media/lighthouse-signup-mobile.JPG)
+
+**Reservation Page - Desktop View**
+
+![Reservation Page - Desktop View](./media/lighthouse-reservation.JPG)
+
+**Reservation Page - Mobile View**
+
+![Reservation Page - Mobile View](./media/lighthouse-reservation-mobile.JPG)
+
+**Manage Reservation Page - Desktop View**
+
+![Manage Reservation Page - Desktop View](./media/lighthouse-manage-reservation.JPG)
+
+**Manage Reservation Page - Mobile View**
+
+![Manage Reservation Page - Mobile View](./media/lighthouse-manage-reservation-mobile.JPG)
+
+**Update Reservation Page - Desktop View**
+
+![Update Reservation Page - Desktop View](./media/lighthouse-update-reservation.JPG)
+
+**Update Reservation Page - Mobile View**
+
+![Update Reservation Page - Mobile View](./media/lighthouse-update-reservation-mobile.JPG)
+
+**Delete Reservation Page - Desktop View**
+
+![Delete Reservation Page - Desktop View](./media/lighthouse-delete-reservation.JPG)
+
+**Delete Reservation Page - Mobile View**
+
+![Delete Reservation Page - Mobile View](./media/lighthouse-delete-reservation-mobile.JPG)
+
+**Account Deletion Page - Desktop View**
+
+![Account Deletion Page - Desktop View](./media/lighthouse-account-deletion.JPG)
+
+**Account Deletion Page - Mobile View**
+
+![Account Deletion Page - Mobile View](./media/lighthouse-account-deletion-mobile.JPG)
+
+**Sign Out Page - Desktop View**
+
+![Sign Out Page - Desktop View](./media/lighthouse-signout.JPG)
+
+**Sign Out Page - Mobile View**
+
+![Sign Out Page - Mobile View](./media/lighthouse-signout-mobile.JPG)
+
+**All Reservations - Desktop View**
+
+![All Reservations - Desktop View](./media/lighthouse-all-reservations.JPG)
+
+**All Reservations - Mobile View**
+
+![All Reservations - Mobile View](./media/lighthouse-all-reservations-mobile.JPG)
+
+**Admin Update Reservations - Desktop View**
+
+![Admin Update Reservations - Desktop View](./media/lighthouse-admin-update-reservations.JPG)
+
+**Admin Update Reservations - Mobile View**
+
+![Admin Update Reservations - Mobile View](./media/lighthouse-admin-update-reservations-mobile.JPG)
+
+**Admin Delete Reservation - Desktop View**
+
+![Admin Delete Reservation - Desktop View](./media/lighthouse-admin-delete-reservation.JPG)
+
+**Admin Delete Reservation - Mobile View**
+
+![Admin Delete Reservation - Mobile View](./media/lighthouse-admin-delete-reservation-mobile.JPG)
 
 # Recources used
 - [Django Project - Forms](https://docs.djangoproject.com/en/5.0/topics/forms/)
