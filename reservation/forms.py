@@ -1,4 +1,6 @@
 from django import forms
+from django.utils import timezone
+from django.core.exceptions import ValidationError
 from .models import Reservation, TIME_CHOICES
 
 
@@ -49,3 +51,9 @@ class ReservationForm(forms.ModelForm):
         widgets = {
             'reservation_date': forms.DateInput(attrs={'type': 'date'})
         }
+
+    def clean_reservation_date(self):
+        reservation_date = self.cleaned_data.get('reservation_date')
+        if reservation_date < timezone.localdate():
+            raise ValidationError("Reservation date cannot be in the past.")
+        return reservation_date

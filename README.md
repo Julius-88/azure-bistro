@@ -192,6 +192,91 @@ Lighthouse is an open-source tool for improving the quality of web pages. It pro
 ## Responsivity
 The responsivity has been manually checked through devtools in google chrome. I also checked the website on my Samsung s9+
 
+# Features
+
+## Home Page
+
+**Hero Section:** When the user enters the website they are greeted by the hero section. If they have not logged, there is a clear CTA button allowing them to do so. This button will change to *RESERVE TABLE* once they are logged in for convenience. It also has the restaurants opening hours and informational text.
+
+![Hero Section - Log In Button](./media/hero-section.JPG)
+
+![Hero Section - Reserve Table Button](./media/hero-section-login.JPG)
+
+**Main Content:** Beneath the hero section are links with images to the menu page. A user can click on a category of their choosing and they will be directed to the corresponding section on the menu page. This allows users to quickly find what they are looking for on our menu.
+
+![Main Content](./media/home-page.JPG)
+
+## Navbar
+
+The navbar is at the top of the webpage no matter where the user is. It also follows the user down when they scroll so that they can always access it. Before the user is logged in they can only access the Home, Menu and Log In links.
+
+![Navbar - Anonymous](./media/navbar-anon.JPG)
+
+If they hover over the menu link or click on it on mobile view, a dropdown menu will appear with each section of the menu.
+
+![Navbar - Menu](./media/navbar-menu.JPG)
+
+Once they login the login link will change to *Account* and a new link will appear called *Reservation*.
+
+![Navbar -  Logged In](./media/navbar-loggedin.JPG)
+
+The account link will also be a dropdown menu that will show three other links. *Sign Out*, *Manage Reservation* and *Delete Account*. This will allow the user to quickly find relevant information.
+
+![Navbar - Account](./media/navbar-account.JPG)
+
+Above the navbar is the name of the restaurant which also functions as a link to the home page. When you hover over the various links they will turn color. Only the Menu and Account links wont turn color since they instead activate their dropdown menu. This gives the user feedback on what they are doing.
+
+![Navbar Hover](./media/navbar-hover.JPG)
+
+## Menu 
+
+On the menu page, the user can find the entire menu and the prices of each item. This will allow them to plan in advance what they wish to eat.
+
+![Menu](./media/menu.JPG)
+
+## Footer
+
+ In the bottom of every page there is the footer. With visiting and contact information and links to our social media. It also contains a small copyright text. This enables users to quickly find out the restaurants contact information no matter where they are on the page.
+
+![Footer](./media/footer.JPG)
+
+## Login Page 
+
+Here the user can login and click on the remember me box. If they do not have an account, there is a link called *Create Account* which will take them to the account creation page. When the user is on an input field, it will be highlighted.
+
+![Login Page](./media/login-page.JPG)
+
+an error text will be shown if the user inputs the wrong login information.
+![Login Page Error](./media/login-page-error.JPG)
+
+Once the user has logged in, they will be directed to the home page where a success message will be shown.
+![Login Success](./media/login-success.JPG)
+
+## Create Account Page
+
+If the user does not have an account they can create one in seconds on the Create Account Page. All they need is a user name and password. 
+
+![Sign Up Page](./media/signup-page.JPG)
+
+If the user name is taken an error message will pop up. An error will also occur if they leave anything but the email address blank.
+
+![Sign Up Page - Error](./media/signup-page-error.JPG)
+![Sign Up Page - Error](./media/signup-page-empty-field.JPG)
+
+Once they register, they will be taken back to the main page and a success message will appear.
+
+## Reservation Page
+
+In the reservation page they can pick which date, time and the number of people they would like to book for. 
+
+![Reservation Page](./media/reservation-page.JPG)
+
+If the time is already booked or has passed an error message will show up. 
+
+
+
+
+
 # Recources used
 - [Django Project - Forms](https://docs.djangoproject.com/en/5.0/topics/forms/)
 
