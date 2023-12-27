@@ -2,7 +2,7 @@ from pathlib import Path
 import dj_database_url
 import os
 if os.path.isfile('env.py'):
-    import env # noqa
+    import env  # noqa
 
 development = os.environ.get('DEVELOPMENT', False)
 

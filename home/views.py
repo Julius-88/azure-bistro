@@ -18,6 +18,7 @@ def contact(request):
 
 
 def confirm_delete_account(request):
+    """ A view to return the confirm delete account page """
     if request.method == 'POST':
         form = ConfirmDeleteForm(request.POST)
         if form.is_valid() and form.cleaned_data['confirm']:
