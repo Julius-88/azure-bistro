@@ -16,12 +16,11 @@ def reservation(request):
 
             # Check if the time slot is already booked
             if Reservation.objects.filter(
-                reservation_date=reservation_date,
+                    reservation_date=reservation_date,
                     reservation_time=reservation_time).exists():
                 messages.error(request, "This time slot is already booked.")
                 return render(
-                    request,
-                    'reservation/reservation.html', {'form': form})
+                    request, 'reservation/reservation.html', {'form': form})
 
             # Creating and Saving the new reservation
             reservation = form.save(commit=False)

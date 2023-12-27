@@ -232,7 +232,7 @@ Above the navbar is the name of the restaurant which also functions as a link to
 
 On the menu page, the user can find the entire menu and the prices of each item. This will allow them to plan in advance what they wish to eat.
 
-![Menu](./media/menu.JPG)
+![Menu](./media/menu-page.JPG)
 
 ## Footer
 
@@ -271,11 +271,36 @@ In the reservation page they can pick which date, time and the number of people 
 
 ![Reservation Page](./media/reservation-page.JPG)
 
-If the time is already booked or has passed an error message will show up. 
+If the time is already booked or has passed, an error message will show up.
 
+![Reservation Booked](./media/reservation-page-booked.JPG)
+![Reservation Past](./media/reservation-page-past.JPG)
 
+Once their reservation is complete, they will be taken back to the main page with a success message. This reservation will be shown in the Manage Reservation page, which they can access from their account.
 
+![Reservation Success](./media/reservation-success.JPG)
 
+## Manage Reservation
+
+Here the user can view all reservations they have made and the details of it. They can also edit or delete the reservation.
+
+![Manage Reservation Page](./media/manage-reservation-page.JPG)
+
+- **Edit Reservation:** Once the user clicks on the button they will be brought to a page where they can edit their reservation. There is also a button that will take them back if they accidentaly clicked on the wrong reservation.
+
+![Manage Reservation Page Edit](./media/manage-reservation-page-edit.JPG)
+
+Once complete, they will be brought back to the *Manage Reservation* page and a success message will be seen.
+
+![Manage Reservation Page Success](./media/manage-reservation-page-edit-success.JPG)
+
+- **Delete Reservation:** The user can also choose to delete a reservation by clicking the *Delete Reservation* button.
+
+![Delete Reservation Page](./media/delete-reservation-page.JPG)
+
+Once complete, they will be brought back to the *Manage Reservation* page and a success message will be seen.
+
+![Delete Reservation Page Success](./media/delete-reservation-page-success.JPG)
 
 # Recources used
 - [Django Project - Forms](https://docs.djangoproject.com/en/5.0/topics/forms/)
@@ -297,5 +322,7 @@ If the time is already booked or has passed an error message will show up.
 - [Geeks For Geeks - args-kwargs-python](https://www.geeksforgeeks.org/args-kwargs-python/)
 
 - [Youtube - Booking System For A Health Clinic](https://www.youtube.com/watch?v=s5xbtuo9pR0&t=102s)
+
+- [Cloudinary](https://cloudinary.com/documentation)
 
 - Conde Institute Projects - I think therefore I blog and Hello Django
