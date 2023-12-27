@@ -419,19 +419,19 @@ The staff member can also choose to edit or delete a reservation from this page.
 
 # Tech Stach
 
-- HTML
-- CSS
-- Django
-- Bootstrap
-- Cloudinary
-- ElephantSQL
-- FontAwesome
-- Figma
-- Git & GitHub
-- Heroku
-- Google Fonts
-- Coolors
-- Favicon
+- **HTML:** Used for structuring the content and layout of the web pages.
+- **CSS:** Used to style and visually enhance the HTML elements.
+- **Django:** Used for backend functionality, including URL routing, views, and template rendering.
+- **Bootstrap:** Used for its grid system, pre-built components and responsive design features.
+- **Cloudinary:** Used to upload, store and display media files.
+- **ElephantSQL:** Used for managing the application's data in a scalable manner.
+- **FontAwesome:** Used for incorporating scalable icons.
+- **Figma:** Used to create initial design of web application.
+- **Git & GitHub:** Git is used for version control and GitHub is used for hosting repository and backup.
+- **Heroku:** Used to deploy, manage and scale the web application.
+- **Google Fonts:** Used for a variety of fonts.
+- **Coolors:** Used to create a color schema.
+- **Favicon:** Used to create favicon.
 
 # Notes
 
