@@ -13,6 +13,7 @@
     {% endfor %}
 </div>
 {% endif %}
+{% if reservations %}
 <h1 class="mb-5 font-lora text-center">All Reservations</h1>
 <div class="d-block d-md-none">
     {% for reservation in reservations %}
@@ -65,4 +66,7 @@
         {% endfor %}
     </table>
 </div>
+{% else %}
+<h1 class="mb-5 font-lora text-center mx-2">You have no reservations</h1>
+{% endif %}
 {% endblock %}

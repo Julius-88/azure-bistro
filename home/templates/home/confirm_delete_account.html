@@ -4,6 +4,9 @@
 {% block extra_title %}| Delete Account{% endblock %}
 
 {% block content %}
+{% for message in messages %}
+<div class="{{ message.tags }} text-center">{{ message }}</div>
+{% endfor %}
 <section class="d-flex flex-column justify-content-center align-items-center h-100">
     <h1 class="mb-5 font-lora text-center">Confirm Account Deletion</h1>
     <p class="text-center mx-2 font-lato">

@@ -191,6 +191,11 @@ Lighthouse is an open-source tool for improving the quality of web pages. It pro
 
 ## Responsivity
 The responsivity has been manually checked through devtools in google chrome. I also checked the website on my Samsung s9+
+When in mobile view, most parts become a column so that it is easier to view. The *All Reservations* page is a table on tablets and cards on mobile screens. 
+
+![All Reservations - Desktop](./media/admin-all-reservations-page.JPG)
+
+![All Reservations - Mobile](./media/admin-all-reservations-page-mobile.JPG)
 
 # Features
 
@@ -261,6 +266,7 @@ If the user does not have an account they can create one in seconds on the Creat
 If the user name is taken an error message will pop up. An error will also occur if they leave anything but the email address blank.
 
 ![Sign Up Page - Error](./media/signup-page-error.JPG)
+
 ![Sign Up Page - Error](./media/signup-page-empty-field.JPG)
 
 Once they register, they will be taken back to the main page and a success message will appear.
@@ -274,6 +280,7 @@ In the reservation page they can pick which date, time and the number of people 
 If the time is already booked or has passed, an error message will show up.
 
 ![Reservation Booked](./media/reservation-page-booked.JPG)
+
 ![Reservation Past](./media/reservation-page-past.JPG)
 
 Once their reservation is complete, they will be taken back to the main page with a success message. This reservation will be shown in the Manage Reservation page, which they can access from their account.
@@ -286,7 +293,7 @@ Here the user can view all reservations they have made and the details of it. Th
 
 ![Manage Reservation Page](./media/manage-reservation-page.JPG)
 
-- **Edit Reservation:** Once the user clicks on the button they will be brought to a page where they can edit their reservation. There is also a button that will take them back if they accidentaly clicked on the wrong reservation.
+**Edit Reservation:** Once the user clicks on the button they will be brought to a page where they can edit their reservation. There is also a button that will take them back if they accidentaly clicked on the wrong reservation.
 
 ![Manage Reservation Page Edit](./media/manage-reservation-page-edit.JPG)
 
@@ -294,13 +301,50 @@ Once complete, they will be brought back to the *Manage Reservation* page and a 
 
 ![Manage Reservation Page Success](./media/manage-reservation-page-edit-success.JPG)
 
-- **Delete Reservation:** The user can also choose to delete a reservation by clicking the *Delete Reservation* button.
+**Delete Reservation:** The user can also choose to delete a reservation by clicking the *Delete Reservation* button.
 
 ![Delete Reservation Page](./media/delete-reservation-page.JPG)
 
 Once complete, they will be brought back to the *Manage Reservation* page and a success message will be seen.
 
 ![Delete Reservation Page Success](./media/delete-reservation-page-success.JPG)
+
+## Sign Out
+The user can sign out of their account, by clicking on the sign out link in their account.
+Once done they will be taken to the main page where the button on the hero-section and the links in the navbar have reverted back. A success message can also be seen.
+
+![Sign Out Page](./media/signout-page.JPG)
+
+![Sign Out Page Success](./media/signout-page-success.JPG)
+
+## Delete Account
+The user can also choose to delete their account. This can be done from their account. They will have to confirm their decision by clicking on the *I confirm I want to delete my account:* checkbox.
+
+![Delete Account Page](./media/delete-account-page.JPG)
+
+Once done, They will be brought back to the main page, where a success message will be shown. This will also delete all of their information from the database.
+
+![Delete Account Page Success](./media/delete-account-page-success.JPG)
+
+**Admin View:**
+
+Before account deletion.
+
+![Before Account Deletion](./media/admin-all-reservations-page.JPG)
+
+After account deletion.
+
+![After Account Deletion](./media/admin-all-reservations-page-account-deletion.JPG)
+
+## Staff
+
+When a staff member logs in there will be two extra links in their account, *Admin Panel* and *All Reservations*. 
+
+If they click on the *Admin Panel* link, they will be taken to the django admin panel.
+If they click on *All Reservations*, they will be taken to a page where they can view all the customers whom have made a reservation. 
+The staff member can also choose to edit or delete a reservation from this page.
+
+![All Reservations](./media/admin-all-reservations-page.JPG)
 
 # Recources used
 - [Django Project - Forms](https://docs.djangoproject.com/en/5.0/topics/forms/)
