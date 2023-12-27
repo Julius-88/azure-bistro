@@ -30,14 +30,14 @@
     </div>
     {% if user.is_authenticated %}
     <div>
-        <a href="{% url 'reservation' %}">
-            <button class="button font-lato">Reserve Table</button>
+        <a href="{% url 'reservation' %}" class="button font-lato">
+            Reserve Table
         </a>
     </div>
     {% else %}
     <div>
-        <a href="{% url 'account_login' %}">
-            <button class="button font-lato">Log In</button>
+        <a href="{% url 'account_login' %}" class="button font-lato">
+            Log In
         </a>
     </div>
     {% endif %}

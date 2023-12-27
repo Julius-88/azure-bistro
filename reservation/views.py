@@ -2,9 +2,12 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .forms import ReservationForm
 from .models import Reservation
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from django.contrib.admin.views.decorators import staff_member_required
 import datetime
 
 
+@login_required
 def reservation(request):
     if request.method == 'POST':
         form = ReservationForm(request.POST)
@@ -40,6 +43,7 @@ def reservation(request):
     return render(request, 'reservation/reservation.html', {'form': form})
 
 
+@login_required
 def manage_reservation(request):
     user_reservations = Reservation.objects.filter(user=request.user).order_by(
         '-created_at')
@@ -49,6 +53,7 @@ def manage_reservation(request):
         {'reservations': user_reservations})
 
 
+@login_required
 def confirm_delete_reservation(request, reservation_id):
     reservation = get_object_or_404(
         Reservation, id=reservation_id, user=request.user)
@@ -63,6 +68,7 @@ def confirm_delete_reservation(request, reservation_id):
         {'reservation': reservation})
 
 
+@login_required
 def update_reservation(request, reservation_id):
     reservation = get_object_or_404(
         Reservation,
@@ -86,6 +92,8 @@ def update_reservation(request, reservation_id):
 # Admin Section
 
 
+@login_required
+@staff_member_required
 def all_reservations(request):
     reservations = Reservation.objects.all().order_by(
         '-reservation_date', '-reservation_time')
@@ -94,6 +102,8 @@ def all_reservations(request):
         'reservation/all_reservations.html', {'reservations': reservations})
 
 
+@login_required
+@staff_member_required
 def admin_update_reservation(request, reservation_id):
     reservation = get_object_or_404(Reservation, id=reservation_id)
 
@@ -110,6 +120,8 @@ def admin_update_reservation(request, reservation_id):
         request, 'reservation/admin_update_reservation.html', {'form': form})
 
 
+@login_required
+@staff_member_required
 def admin_delete_reservation(request, reservation_id):
     reservation = get_object_or_404(Reservation, id=reservation_id)
 

@@ -47,6 +47,32 @@ This README outlines the steps necessary to deploy an application to Heroku. It 
 
 # Testing
 
+## HTML
+W3C Markup Validation Service, a tool for checking the markup validity of web documents in HTML, was utilized to ensure that the website conforms to web standards.
+
+**Errors in the landing page:** The validator showed the following errors,
+![Home Page HTML errors](./media/html-index-error.JPG)
+
+**Error in the menu page:** The validator showed the following error,
+![Menu Page HTML error](./media/html-menu-error.JPG)
+
+**Restricted Pages:** An error occurred when it tried to analyze the page for users, in the console it wrote *'TypeError: 'AnonymousUser' object is not iterable'* for the following pages,
+- Manage Reservations
+- Edit Reservation
+- Delete Reservation
+
+![Restricted](./media/html-restricted.JPG)
+
+I have since added @login_required in their views and thereby fixed the issue.
+Once I fixed it, it gave me this info,
+
+![Info](./media/html-bug-fixed.JPG)
+
+I have searched my entire file and cannot find what it is referring too, I think that it has something to do with django, since it only appeared when I added the @login_required to the viewpoints. I will seek assistance regarding this issue.
+
+**Success:** No other pages showed any issues, and after having solved the minor issues shown in the home page and the menu page we are met by a success message,
+![Success](./media/html-success.JPG)
+
 ## Lighthouse
 
 Lighthouse is an open-source tool for improving the quality of web pages. It provides audits for performance, accessibility, progressive web apps, and more. Below are the Lighthouse test results for the Azure Bistro website.
