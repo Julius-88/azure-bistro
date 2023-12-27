@@ -436,3 +436,11 @@ The staff member can also choose to edit or delete a reservation from this page.
 # Notes
 
 **Media Folder:** This project currently does not use the *media* folder, as it is designed without the need for handling user-uploaded content. The folder is kept in place to allow for easy integration of media files in the future.
+
+## Special Admin Permissions
+
+In the Azure Bistro application, administrators have extended permissions compared to regular users. One key distinction is in the reservation system:
+
+- **Regular Users**: Cannot book a reservation for a date and time that has already been booked by another user. This restriction ensures that double bookings do not occur, maintaining a smooth and efficient reservation process.
+
+- **Administrators**: Have the ability to override this restriction and book reservations even on dates and times that are already booked. This feature is intended to provide flexibility for handling special circumstances or last-minute changes that might require administrative intervention.
