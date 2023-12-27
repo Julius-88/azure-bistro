@@ -45,6 +45,47 @@ This README outlines the steps necessary to deploy an application to Heroku. It 
 
 ![Heroku Deploy Branch Button](./media/heroku-deploy-button.JPG)
 
+# Design
+
+This section outlines the design process and choices for the project, focusing on creating an aesthetically pleasing and functional website.
+
+**Initial Concept:** Explore the initial design concept on [Figma](https://www.figma.com/file/lk5TasgZyj0YGNNZ4hpgdn/Project-4---Restaurant?type=design&node-id=0%3A1&mode=design&t=HIdRRCTGi6cB25rD-1). Changes were made to the original design for improved visual appeal and to remove redundant elements.
+
+**Color Palette:** 
+- Azure Blue (#007FFF): Used exclusively for the logo to maintain its uniqueness.
+- Midnight Blue (#111B2C): Chosen for the background and dropdown menus for optimal contrast and eye comfort.
+- Dark Navy Blue (#1C2E4A): Applied to the navbar and footer for a distinct contrast with the main content.
+- Black and White: Standard for text, ensuring readability.
+- Coral (#FF7F50): Employed for CTA buttons and links to attract attention.
+
+![Color Scheme](./media/color-scheme.png)
+
+**Typography:**
+- Satisfy: Selected for the logo to embody the elegance of a high-end restaurant.
+- Lora & Lato: Used for headings and body text, respectively, offering a balance between similarity and contrast for improved readability.
+
+**Design Evolution:** 
+
+- Simplified Navigation: Reduced the number of buttons, focusing on a single versatile button in the hero section. This button dynamically changes based on user status (anonymous or logged in), enhancing user interaction.
+
+- Enhanced Hero Section: Added introductory text to provide context and encourage account creation. Merged opening hours for clarity.
+
+- Accessibility Improvements: Darkened the blue background for better readability by screen readers.
+
+- Menu Layout: Refined the menu layout for a more uniform appearance.
+
+- Streamlined Table Booking: Revamped the table booking process for efficiency and user convenience. Users can now make reservations with minimal input, receiving instant feedback through the platform.
+
+- Account Management: Simplified password recovery process and considering future enhancements like email confirmations.
+
+- Feedback Mechanism: Utilized Django's built-in messaging for user feedback, aligning with the site's aesthetic and functionality.
+
+- Social Media Integration: Customized social media icons to match the site’s design.
+
+- Optimization: Removed the contact page for a more streamlined user experience.
+
+- Technical Issues: Addressed and temporarily removed the problematic Google image from the footer, planning to resolve the issue later.
+
 # Testing
 
 ## HTML
@@ -190,8 +231,7 @@ Lighthouse is an open-source tool for improving the quality of web pages. It pro
 ![Admin Delete Reservation - Mobile View](./media/lighthouse-admin-delete-reservation-mobile.JPG)
 
 ## Responsivity
-The responsivity has been manually checked through devtools in google chrome. I also checked the website on my Samsung s9+
-When in mobile view, most parts become a column so that it is easier to view. The *All Reservations* page is a table on tablets and cards on mobile screens. 
+The website's responsivity was manually checked through Chrome DevTools and on my Samsung S9+. In mobile view, most elements transition into a column format for easier viewing. The *All Reservations* page is a table on tablets and cards on mobile screens. 
 
 ![All Reservations - Desktop](./media/admin-all-reservations-page.JPG)
 
@@ -201,19 +241,19 @@ When in mobile view, most parts become a column so that it is easier to view. Th
 
 ## Home Page
 
-**Hero Section:** When the user enters the website they are greeted by the hero section. If they have not logged, there is a clear CTA button allowing them to do so. This button will change to *RESERVE TABLE* once they are logged in for convenience. It also has the restaurants opening hours and informational text.
+**Hero Section:** When users enter the website, they are greeted by the hero section. If they have not logged in, a clear CTA (Call To Action) button allows them to do so. This button will change to *RESERVE TABLE* once they are logged in for convenience. It also has the restaurants opening hours and informational text.
 
 ![Hero Section - Log In Button](./media/hero-section.JPG)
 
 ![Hero Section - Reserve Table Button](./media/hero-section-login.JPG)
 
-**Main Content:** Beneath the hero section are links with images to the menu page. A user can click on a category of their choosing and they will be directed to the corresponding section on the menu page. This allows users to quickly find what they are looking for on our menu.
+**Main Content:** Beneath the hero section, there are image links to the menu page. Users can click on a category of their choice and will be directed to the corresponding section on the menu page. This allows users to quickly find what they are looking for on our menu.
 
 ![Main Content](./media/home-page.JPG)
 
 ## Navbar
 
-The navbar is at the top of the webpage no matter where the user is. It also follows the user down when they scroll so that they can always access it. Before the user is logged in they can only access the Home, Menu and Log In links.
+The navbar remains at the top of the webpage, no matter where users are on the site. It also scrolls down with the user, ensuring constant access. Before the user is logged in they can only access the Home, Menu and Log In links.
 
 ![Navbar - Anonymous](./media/navbar-anon.JPG)
 
