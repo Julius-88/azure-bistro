@@ -73,6 +73,10 @@ I have searched my entire file and cannot find what it is referring too, I think
 **Success:** No other pages showed any issues, and after having solved the minor issues shown in the home page and the menu page we are met by a success message,
 ![Success](./media/html-success.JPG)
 
+## CSS
+W3C CSS validation was used to validate the CSS of this project. No errors where found.
+![Success](./media/css-success.JPG)
+
 ## Lighthouse
 
 Lighthouse is an open-source tool for improving the quality of web pages. It provides audits for performance, accessibility, progressive web apps, and more. Below are the Lighthouse test results for the Azure Bistro website.
