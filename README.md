@@ -189,6 +189,9 @@ Lighthouse is an open-source tool for improving the quality of web pages. It pro
 
 ![Admin Delete Reservation - Mobile View](./media/lighthouse-admin-delete-reservation-mobile.JPG)
 
+## Responsivity
+The responsivity has been manually checked through devtools in google chrome. I also checked the website on my Samsung s9+
+
 # Recources used
 - [Django Project - Forms](https://docs.djangoproject.com/en/5.0/topics/forms/)
 
