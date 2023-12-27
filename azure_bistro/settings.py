@@ -4,14 +4,19 @@ import os
 if os.path.isfile('env.py'):
     import env  # noqa
 
+# Set to True when in development, False in production
 development = os.environ.get('DEVELOPMENT', False)
 
+# Base directory of the Django project
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Secret key for the project taken from env.py and heroku
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
+# Debug mode is on in development, off in production
 DEBUG = development
 
+# Allowed hosts for the Django project
 if development:
     ALLOWED_HOSTS = [
         '8000-julius88-azurebistro-5w1a98bu9j3.ws-eu107.gitpod.io']
@@ -77,8 +82,10 @@ AUTHENTICATION_BACKENDS = {
     'allauth.account.auth_backends.AuthenticationBackend',
 }
 
+# Site ID for Django's sites framework
 SITE_ID = 1
 
+# Configuration for user account management.
 ACCOUNT_AUTHENTICATION_METHOD = 'username'
 ACCOUNT_EMAIL_REQUIRED = False
 ACCOUNT_EMAIL_VERIFICATION = 'none'
@@ -90,6 +97,7 @@ LOGOUT_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'azure_bistro.wsgi.application'
 
+# Database configuration
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }

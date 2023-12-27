@@ -3,7 +3,6 @@ from django.conf import settings
 from datetime import time
 from django.core.validators import MinValueValidator, MaxValueValidator
 
-
 TIME_CHOICES = [
     (time(18, 0), '18:00'),
     (time(19, 30), '19:30'),

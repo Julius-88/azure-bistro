@@ -7,6 +7,7 @@ from django.contrib.admin.views.decorators import staff_member_required
 import datetime
 
 
+# View for handling reservation creation.
 @login_required
 def reservation(request):
     if request.method == 'POST':
@@ -31,7 +32,7 @@ def reservation(request):
                 return render(
                     request, 'reservation/reservation.html', {'form': form})
 
-            # Save the new reservation
+            # Creating and Saving the new reservation
             reservation = form.save(commit=False)
             reservation.user = request.user
             reservation.reservation_date = reservation_date
@@ -39,10 +40,12 @@ def reservation(request):
             messages.success(request, 'Reservation made successfully!')
             return redirect('home')
     else:
+        # Display an empty form for a new reservation
         form = ReservationForm()
     return render(request, 'reservation/reservation.html', {'form': form})
 
 
+# View for users to manage their reservations.
 @login_required
 def manage_reservation(request):
     user_reservations = Reservation.objects.filter(user=request.user).order_by(
@@ -53,6 +56,7 @@ def manage_reservation(request):
         {'reservations': user_reservations})
 
 
+# View for confirming the deletion of a reservation
 @login_required
 def confirm_delete_reservation(request, reservation_id):
     reservation = get_object_or_404(
@@ -68,6 +72,7 @@ def confirm_delete_reservation(request, reservation_id):
         {'reservation': reservation})
 
 
+# View for updating an existing reservation
 @login_required
 def update_reservation(request, reservation_id):
     reservation = get_object_or_404(
@@ -92,6 +97,7 @@ def update_reservation(request, reservation_id):
 # Admin Section
 
 
+# View for admin to view all reservations.
 @login_required
 @staff_member_required
 def all_reservations(request):
@@ -102,6 +108,7 @@ def all_reservations(request):
         'reservation/all_reservations.html', {'reservations': reservations})
 
 
+# View for admin to update any reservation.
 @login_required
 @staff_member_required
 def admin_update_reservation(request, reservation_id):
@@ -120,6 +127,7 @@ def admin_update_reservation(request, reservation_id):
         request, 'reservation/admin_update_reservation.html', {'form': form})
 
 
+# View for admin to delete any reservation
 @login_required
 @staff_member_required
 def admin_delete_reservation(request, reservation_id):
