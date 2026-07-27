@@ -393,7 +393,7 @@ The staff member can also choose to edit or delete a reservation from this page.
 - **FontAwesome:** Used for incorporating scalable icons.
 - **Figma:** Used to create initial design of web application.
 - **Git & GitHub:** Git is used for version control and GitHub is used for hosting repository and backup.
-- **Heroku:** Used to deploy, manage and scale the web application.
+- **Replit:** Used to deploy and manage the web application.
 - **Google Fonts:** Used for a variety of fonts.
 - **Coolors:** Used to create a color schema.
 - **Favicon:** Used to create favicon.
