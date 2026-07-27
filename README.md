@@ -8,42 +8,7 @@ As a school project, Azure Bistro is a testament to the application of Django in
 
 Dive into Azure Bistro and discover a world where technology meets culinary artistry!
 
-[Azure Bistro - Deployed Site](https://azure-bistro-v2-df04593043a2.herokuapp.com/)
-
-# Deployment to Heroku
-
-This README outlines the steps necessary to deploy an application to Heroku. It is designed as a guide for users looking to deploy their own applications using Heroku's platform.
-
-## Pre-Requisites
-
-**Before beginning, ensure you have a Heroku account!**
-
-## Steps for Deployment
-
-1.  **Create a New App:**
- - Click on the *new* button in the upper right corner of the Heroku dashboard.
- - Select *Create new app*.
-
-![Heroku new button](./docs/heroku-new-button.JPG)
-
-2. **App Name and Region:**
-- Choose an app name. 
-- Select a region closest to you for optimal performance.
-- Click on *Create app* to confirm.
-
-![Create New App](./docs/heroku-app-name.JPG)
-
-3. **Connecting to GitHub:**
-- In the *Deploy* section of your app, select *GitHub* as the *Deployment method*.
-- In *Connect to GitHub*, type in the name of your GitHub project.
-- Click *Connect* next tot the project you wish to deploy.
-
-![Heroku Connecting to Github](./docs/heroku-project-name.JPG)
-
-4. Manual Deployment
-- Scroll down to *Manual deploy* and click on the *Deploy Branch* button to initiate the deployment process.
-
-![Heroku Deploy Branch Button](./docs/heroku-deploy-button.JPG)
+[Azure Bistro - Deployed Site](https://azure-bistro--Julius88.replit.app)
 
 # Design
 
